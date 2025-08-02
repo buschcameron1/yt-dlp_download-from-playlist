@@ -1,0 +1,3 @@
+oauth integration or alternative to remove items from playlist
+some way to specify which folder to place in, maybe a way to move to show specific folders?
+set up as container

@@ -1,4 +1,4 @@
-import requests, json, yt_dlp
+import requests, json, yt_dlp, os
 
 def getVideos(playlistId, apiKey):
     playlistItems = requests.get(f'https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=10&playlistId={playlistId}&key={apiKey}')
@@ -15,6 +15,7 @@ def downloadVideos(urls, storageLocation):
 
 
 def main():
+    os.chdir(os.path.dirname(__file__))
     with open('config.json', 'r') as file:
         config = json.load(file)
 
