@@ -1,5 +1,5 @@
 {
     "playlistId": "",
     "apiKey": "",
-    "storagePath": "~/%(title)s.mp4"
+    "storagePath": "~/%(title)s"
 }
