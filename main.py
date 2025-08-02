@@ -6,7 +6,8 @@ def getVideos(playlistId, apiKey):
 
 def downloadVideos(urls, storageLocation):
     opts = {
-        'outtmpl': storageLocation
+        'outtmpl': storageLocation,
+        'nooverwrites': True
     }
     yt_dlp.YoutubeDL(opts).download(urls)
 
