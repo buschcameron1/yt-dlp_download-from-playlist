@@ -1,7 +1,7 @@
 import requests, json, yt_dlp, os
 
 def getVideos(playlistId, apiKey):
-    playlistItems = requests.get(f'https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=10&playlistId={playlistId}&key={apiKey}')
+    playlistItems = requests.get(f'https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId={playlistId}&key={apiKey}')
     return playlistItems.json()['items']
 
 def downloadVideos(urls, storageLocation):
